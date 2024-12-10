@@ -6,65 +6,91 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Aesthetic gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
 .container {
     text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
+    background: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: 600;
     color: #333;
+    margin-bottom: 10px;
 }
 
 p {
     color: #666;
-    margin-bottom: 20px;
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
 form input[type="file"] {
-    padding: 10px;
+    padding: 12px;
     font-size: 1em;
     margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input[type="file"]:hover {
+    border: 2px solid #ff7e5f;
 }
 
 form button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1em;
-    background-color: #4CAF50;
+    background: #ff7e5f;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-    background-color: #45a049;
+    background: #feb47b;
+    transform: scale(1.05);
 }
 
 #result {
     margin-top: 30px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
     border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 #transcription-text {
     color: #333;
     font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
